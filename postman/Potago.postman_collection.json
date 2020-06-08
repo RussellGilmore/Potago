@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "ca387adb-040b-4b16-b1f6-e3b065a8b4c5",
+		"name": "Potago",
+		"description": "This is a demo api to learn about how to deploy a basic RESTful API in golang. ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllPotatoes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/potato",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"potato"
+					]
+				},
+				"description": "Returns all potato objects in the database. "
+			},
+			"response": []
+		},
+		{
+			"name": "getPotatoById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/potato/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"potato",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postPotato",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Orange Potato\",\n    \"description\": \"A good orange potato.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/potato",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"potato"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "putPotato",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Updated Potato\",\n    \"description\": \"A good updated potato.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/potato/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"potato",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletePotato",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/potato/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"potato",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
